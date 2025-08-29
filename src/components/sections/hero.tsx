@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import FadeIn from "@/components/animations/fade-in"
 import AnimatedSun from "@/components/animated-sun"
@@ -19,7 +21,7 @@ export default function Hero() {
                 {PERSONAL_INFO.title}
               </p>
               <div className="text-lg md:text-2xl text-center italic text-muted-foreground/80">
-                <span className="text-xl md:text-3xl font-light tracking-wide text-muted-foreground/90">सूर्य • சூர்यா</span> • &quot;Suryaa&quot; means <span className="text-amber-400 font-semibold text-xl md:text-3xl">Sun</span> in Sanskrit & Tamil
+                <span className="text-xl md:text-3xl font-light tracking-wide text-muted-foreground/90">सूर्या • சூர்யா</span> • &quot;Suryaa&quot; means <span className="text-amber-400 font-semibold text-xl md:text-3xl">Sun</span> in Sanskrit & Tamil
               </div>
             </div>
           </div>
@@ -30,10 +32,30 @@ export default function Hero() {
               Building scalable AI systems and geospatial analytics platforms. MS Computer Science @ UC Riverside.
             </p>
             <div className="flex gap-4 justify-center">
-              <Button variant="default" size="lg" className="rounded-full">
+              <Button
+                variant="default"
+                size="lg"
+                className="rounded-full"
+                onClick={() => {
+                  const element = document.getElementById('projects')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
+              >
                 View Projects
               </Button>
-              <Button variant="outline" size="lg" className="rounded-full">
+              <Button
+                variant="outline"
+                size="lg"
+                className="rounded-full"
+                onClick={() => {
+                  const element = document.getElementById('contact')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
+              >
                 Get in Touch
               </Button>
             </div>

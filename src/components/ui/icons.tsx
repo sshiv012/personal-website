@@ -113,7 +113,13 @@ export const SendIcon = ({ size = 16, ...props }: IconProps) => (
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
-      d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+      d="m3 3 3 9-3 9 19-9-19-9Z"
+    />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="m6 12h16"
     />
   </svg>
 );

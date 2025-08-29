@@ -1,5 +1,44 @@
+"use client"
+
 import { Badge } from "@/components/ui/badge"
+import { motion } from "framer-motion"
+import { useState } from "react"
 import FadeIn from "@/components/animations/fade-in"
+
+const SkillBadge = ({ skill, index }: { skill: string; index: number }) => {
+  const [isHovered, setIsHovered] = useState(false)
+  
+  return (
+    <motion.div
+      className="relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
+    >
+      <Badge 
+        variant="secondary" 
+        className="text-sm py-2 px-4 transition-all duration-300 cursor-default relative overflow-hidden hover:bg-primary hover:text-primary-foreground"
+        style={{
+          boxShadow: isHovered 
+            ? '0 0 20px rgba(255, 193, 7, 0.3), 0 0 40px rgba(255, 193, 7, 0.1)' 
+            : 'none'
+        }}
+      >
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-yellow-200/20 via-orange-200/30 to-yellow-200/20"
+          initial={{ x: "-100%" }}
+          animate={{ x: isHovered ? "100%" : "-100%" }}
+          transition={{ 
+            duration: 0.6,
+            ease: "easeInOut"
+          }}
+        />
+        <span className="relative z-10">{skill}</span>
+      </Badge>
+    </motion.div>
+  )
+}
 
 const skillCategories = [
   {
@@ -48,13 +87,7 @@ export default function Skills() {
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {category.skills.map((skill, skillIndex) => (
-                    <Badge 
-                      key={skillIndex} 
-                      variant="secondary" 
-                      className="text-sm py-2 px-4 hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
-                    >
-                      {skill}
-                    </Badge>
+                    <SkillBadge key={skillIndex} skill={skill} index={skillIndex} />
                   ))}
                 </div>
               </div>

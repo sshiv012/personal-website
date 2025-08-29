@@ -137,7 +137,7 @@ export default function ContactForm() {
                 ) : isSubmitted ? (
                   <div className="flex items-center gap-2">
                     <span className="text-lg">✅</span>
-                    Message Sent!
+                    Thanks! I&apos;ll get back to you soon
                   </div>
                 ) : (
                   <div className="flex items-center gap-2">
@@ -148,17 +148,6 @@ export default function ContactForm() {
               </Button>
             </motion.div>
 
-            {isSubmitted && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-center p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg"
-              >
-                <p className="text-green-700 dark:text-green-300 font-medium">
-                  Thanks for reaching out! I&apos;ll get back to you soon.
-                </p>
-              </motion.div>
-            )}
           </form>
 
           <div className="mt-8 pt-6 border-t border-border">
@@ -167,7 +156,7 @@ export default function ContactForm() {
                 Usually responds within 24 hours
               </Badge>
               <Badge variant="outline" className="text-xs">
-                All fields encrypted
+                Secure HTTPS transmission
               </Badge>
             </div>
           </div>

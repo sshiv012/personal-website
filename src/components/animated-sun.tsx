@@ -101,16 +101,16 @@ export default function AnimatedSun() {
                 }}
                 transition={{
                   scale: {
-                    duration: isHovered ? 0.6 : 3 + Math.random() * 2,
+                    duration: isHovered ? 0.6 : 3 + (i % 5) * 0.4,
                     repeat: isHovered ? 0 : Infinity,
                     ease: isHovered ? "easeOut" : "easeInOut",
-                    delay: isHovered ? i * 0.02 : Math.random() * 2,
+                    delay: isHovered ? i * 0.02 : (i * 0.1) % 2,
                   },
                   opacity: {
-                    duration: isHovered ? 0.6 : 3 + Math.random() * 2,
+                    duration: isHovered ? 0.6 : 3 + (i % 5) * 0.4,
                     repeat: isHovered ? 0 : Infinity,
                     ease: isHovered ? "easeOut" : "easeInOut",
-                    delay: isHovered ? i * 0.02 : Math.random() * 2,
+                    delay: isHovered ? i * 0.02 : (i * 0.1) % 2,
                   }
                 }}
               />
@@ -139,16 +139,16 @@ export default function AnimatedSun() {
                 }}
                 transition={{
                   scale: {
-                    duration: isHovered ? 0.5 : 3.5 + Math.random() * 1.5,
+                    duration: isHovered ? 0.5 : 3.5 + (i % 4) * 0.375,
                     repeat: isHovered ? 0 : Infinity,
                     ease: isHovered ? "easeOut" : "easeInOut",
-                    delay: isHovered ? i * 0.025 : Math.random() * 1.5,
+                    delay: isHovered ? i * 0.025 : (i * 0.15) % 1.5,
                   },
                   opacity: {
-                    duration: isHovered ? 0.5 : 3.5 + Math.random() * 1.5,
+                    duration: isHovered ? 0.5 : 3.5 + (i % 4) * 0.375,
                     repeat: isHovered ? 0 : Infinity,
                     ease: isHovered ? "easeOut" : "easeInOut",
-                    delay: isHovered ? i * 0.025 : Math.random() * 1.5,
+                    delay: isHovered ? i * 0.025 : (i * 0.15) % 1.5,
                   }
                 }}
               />
@@ -177,16 +177,16 @@ export default function AnimatedSun() {
                 }}
                 transition={{
                   scale: {
-                    duration: isHovered ? 0.4 : 4 + Math.random(),
+                    duration: isHovered ? 0.4 : 4 + (i % 3) * 0.33,
                     repeat: isHovered ? 0 : Infinity,
                     ease: isHovered ? "easeOut" : "easeInOut",
-                    delay: isHovered ? i * 0.03 : Math.random(),
+                    delay: isHovered ? i * 0.03 : (i * 0.2) % 1,
                   },
                   opacity: {
-                    duration: isHovered ? 0.4 : 4 + Math.random(),
+                    duration: isHovered ? 0.4 : 4 + (i % 3) * 0.33,
                     repeat: isHovered ? 0 : Infinity,
                     ease: isHovered ? "easeOut" : "easeInOut",
-                    delay: isHovered ? i * 0.03 : Math.random(),
+                    delay: isHovered ? i * 0.03 : (i * 0.2) % 1,
                   }
                 }}
               />
