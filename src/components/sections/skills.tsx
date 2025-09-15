@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 import FadeIn from "@/components/animations/fade-in"
 
-const SkillBadge = ({ skill, index }: { skill: string; index: number }) => {
+const SkillBadge = ({ skill }: { skill: string; index: number }) => {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
@@ -73,7 +73,7 @@ export default function Skills() {
               Skills
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Some of the technologies I've worked with.
+              Some of the technologies I&apos;ve worked with.
             </p>
           </div>
         </FadeIn>
