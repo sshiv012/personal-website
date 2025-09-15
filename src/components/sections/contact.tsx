@@ -2,29 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import ContactForm from "@/components/contact-form"
 import FadeIn from "@/components/animations/fade-in"
-import { PERSONAL_INFO } from "@/lib/constants"
-import type { ContactMethod } from "@/types"
-
-const contactMethods: ContactMethod[] = [
-  {
-    title: "Email",
-    description: "Best for detailed discussions and project inquiries",
-    value: PERSONAL_INFO.email,
-    link: `mailto:${PERSONAL_INFO.email}`
-  },
-  {
-    title: "LinkedIn",
-    description: "Professional networking and career opportunities",
-    value: "Connect on LinkedIn",
-    link: PERSONAL_INFO.linkedin
-  },
-  {
-    title: "GitHub",
-    description: "Explore my code and open source contributions",
-    value: "View on GitHub",
-    link: PERSONAL_INFO.github
-  }
-]
+import { CONTACT_METHODS } from "@/lib/constants"
 
 export default function Contact() {
   return (
@@ -41,13 +19,13 @@ export default function Contact() {
           </div>
         </FadeIn>
 
-        <div className="min-h-[600px] flex items-end">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end w-full">
+        <div className="min-h-[600px] flex items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start w-full">
             <FadeIn delay={0.2}>
               <div className="w-full">
-                <div className="flex flex-col justify-end">
+                <div className="flex flex-col justify-start">
                   <div className="space-y-4">
-                    {contactMethods.map((method, index) => (
+                    {CONTACT_METHODS.map((method, index) => (
                       <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
                         <CardHeader className="py-4">
                           <CardTitle className="text-lg font-medium">{method.title}</CardTitle>

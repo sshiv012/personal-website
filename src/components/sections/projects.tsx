@@ -18,10 +18,10 @@ const FloatingParticle = ({ index }: { index: number }) => {
     { top: '50%', left: '10px' },       // Middle-left
     { top: '50%', right: '10px' }       // Middle-right
   ]
-  
+
   const position = positions[index % positions.length]
   const moveDistance = 20
-  
+
   return (
     <motion.div
       className="absolute w-1 h-1 bg-yellow-300/60 rounded-full pointer-events-none z-10"
@@ -36,12 +36,12 @@ const FloatingParticle = ({ index }: { index: number }) => {
       animate={{
         opacity: [0, 0.8, 0.4, 0.8, 0],
         scale: [0, 1.2, 0.8, 1.2, 0],
-        x: index % 2 === 0 
-          ? [0, moveDistance, -moveDistance/2, moveDistance, 0]
-          : [0, -moveDistance, moveDistance/2, -moveDistance, 0],
-        y: index % 3 === 0 
-          ? [0, -moveDistance/2, moveDistance, -moveDistance/2, 0]
-          : [0, moveDistance/2, -moveDistance, moveDistance/2, 0]
+        x: index % 2 === 0
+          ? [0, moveDistance, -moveDistance / 2, moveDistance, 0]
+          : [0, -moveDistance, moveDistance / 2, -moveDistance, 0],
+        y: index % 3 === 0
+          ? [0, -moveDistance / 2, moveDistance, -moveDistance / 2, 0]
+          : [0, moveDistance / 2, -moveDistance, moveDistance / 2, 0]
       }}
       exit={{
         opacity: 0,
@@ -60,10 +60,10 @@ const FloatingParticle = ({ index }: { index: number }) => {
 
 const ProjectCard = ({ project, index }: { project: typeof projects[0], index: number }) => {
   const [isHovered, setIsHovered] = useState(false)
-  
+
   return (
     <StaggerItem key={index}>
-      <div 
+      <div
         className="relative h-full group"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -71,11 +71,11 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
         <motion.div
           className="h-full"
           animate={{
-            filter: isHovered 
-              ? "drop-shadow(0 0 30px rgba(255, 193, 7, 0.3))" 
+            filter: isHovered
+              ? "drop-shadow(0 0 30px rgba(255, 193, 7, 0.3))"
               : "drop-shadow(0 0 0px rgba(255, 193, 7, 0))",
           }}
-          transition={{ 
+          transition={{
             duration: 0.4,
             ease: "easeOut"
           }}
@@ -107,9 +107,31 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
                 </motion.div>
               )}
             </AnimatePresence>
-            
+
             <CardHeader className="flex-shrink-0">
-              <CardTitle className="text-xl font-medium">{project.title}</CardTitle>
+              <div className="flex items-center justify-between mb-2">
+                <CardTitle className="text-xl font-medium">{project.title}</CardTitle>
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-blue-600 hover:text-blue-800 underline"
+                  >
+                    Live - Try it out now!
+                  </a>
+                )}
+                {project.demoLink && (
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-blue-600 hover:text-blue-800 underline"
+                  >
+                    Demo
+                  </a>
+                )}
+              </div>
               <CardDescription className="text-base leading-relaxed">
                 {project.description}
               </CardDescription>
@@ -124,9 +146,9 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
                     </Badge>
                   ))}
                 </div>
-                <motion.a 
-                  href={project.link} 
-                  target="_blank" 
+                <motion.a
+                  href={project.link}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-sm font-medium hover:underline"
                   whileHover={{
@@ -140,7 +162,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
           </Card>
         </motion.div>
       </div>
-    </StaggerItem>
+    </StaggerItem >
   )
 }
 
@@ -149,13 +171,15 @@ const projects = [
     title: "PlotThePlot",
     description: "AI-Native Novel Analysis Platform using Gemini 2.0 for long-form comprehension, producing structured story arcs and relationship graphs",
     technologies: ["Python", "Flask", "Gemini 2.0", "Next.js", "D3.js", "SQLite"],
-    link: "https://plot-the-plot.vercel.app/"
+    link: "https://github.com/sshiv012/PlotThePlotRepo",
+    liveLink: "https://plot-the-plot.vercel.app/"
   },
   {
-    title: "Raster Data Exploration", 
+    title: "Raster Data Exploration",
     description: "Full-stack platform for exploring terabyte-scale satellite imagery with custom indexing and millisecond pixel retrieval",
     technologies: ["Scala", "Apache Spark", "Hadoop", "JavaScript", "Beast"],
-    link: "https://dl.acm.org/doi/10.1145/3681763.3698475"
+    link: "https://dl.acm.org/doi/10.1145/3681763.3698475",
+    demoLink: "https://youtu.be/CRZg8ra0bc4"
   },
   {
     title: "GeoVocab",

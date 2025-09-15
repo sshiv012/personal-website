@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import FadeIn from "@/components/animations/fade-in"
-import AnimatedSun from "@/components/animated-sun"
+import AnimatedSun from "@/components/animated-sun-optimized"
 import { PERSONAL_INFO } from "@/lib/constants"
 
 export default function Hero() {
@@ -21,7 +21,9 @@ export default function Hero() {
                 {PERSONAL_INFO.title}
               </p>
               <div className="text-lg md:text-2xl text-center italic text-muted-foreground/80">
-                <span className="text-xl md:text-3xl font-light tracking-wide text-muted-foreground/90">सूर्या • சூர்யா</span> • &quot;Suryaa&quot; means <span className="text-amber-400 font-semibold text-xl md:text-3xl">Sun</span> in Sanskrit & Tamil
+                <span className="text-xl md:text-3xl font-light tracking-wide text-muted-foreground/90">
+                  <span style={{ fontFamily: 'var(--font-devanagari)' }}>सूर्या</span> • <span style={{ fontFamily: 'var(--font-tamil)' }}>சூர்யா</span>
+                </span> • &quot;Suryaa&quot; means <span className="text-amber-400 font-semibold text-xl md:text-3xl">Sun</span> in Sanskrit & Tamil
               </div>
             </div>
           </div>
@@ -29,7 +31,8 @@ export default function Hero() {
         <FadeIn delay={0.2}>
           <div className="space-y-4">
             <p className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed text-muted-foreground">
-              Building scalable AI systems and geospatial analytics platforms. MS Computer Science @ UC Riverside.
+              Building scalable backends, human centric fronts, steady infra.<br />
+              Now exploring AI workflows and geospatial analytics.<br />MS Computer Science @ UC Riverside.
             </p>
             <div className="flex gap-4 justify-center">
               <Button

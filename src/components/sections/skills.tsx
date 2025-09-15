@@ -7,7 +7,7 @@ import FadeIn from "@/components/animations/fade-in"
 
 const SkillBadge = ({ skill, index }: { skill: string; index: number }) => {
   const [isHovered, setIsHovered] = useState(false)
-  
+
   return (
     <motion.div
       className="relative"
@@ -16,12 +16,12 @@ const SkillBadge = ({ skill, index }: { skill: string; index: number }) => {
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
     >
-      <Badge 
-        variant="secondary" 
+      <Badge
+        variant="secondary"
         className="text-sm py-2 px-4 transition-all duration-300 cursor-default relative overflow-hidden hover:bg-primary hover:text-primary-foreground"
         style={{
-          boxShadow: isHovered 
-            ? '0 0 20px rgba(255, 193, 7, 0.3), 0 0 40px rgba(255, 193, 7, 0.1)' 
+          boxShadow: isHovered
+            ? '0 0 20px rgba(255, 193, 7, 0.3), 0 0 40px rgba(255, 193, 7, 0.1)'
             : 'none'
         }}
       >
@@ -29,7 +29,7 @@ const SkillBadge = ({ skill, index }: { skill: string; index: number }) => {
           className="absolute inset-0 bg-gradient-to-r from-yellow-200/20 via-orange-200/30 to-yellow-200/20"
           initial={{ x: "-100%" }}
           animate={{ x: isHovered ? "100%" : "-100%" }}
-          transition={{ 
+          transition={{
             duration: 0.6,
             ease: "easeInOut"
           }}
@@ -73,7 +73,7 @@ export default function Skills() {
               Skills
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Technical expertise across full-stack development, AI/ML, and distributed systems.
+              Some of the technologies I've worked with.
             </p>
           </div>
         </FadeIn>

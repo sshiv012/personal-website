@@ -85,24 +85,6 @@ const Navigation = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        {isActive && (
-          <motion.div
-            className="absolute -inset-2 rounded-full"
-            animate={{
-              boxShadow: [
-                "0 0 0px rgba(255, 193, 7, 0)",
-                "0 0 15px rgba(255, 193, 7, 0.4)",
-                "0 0 25px rgba(255, 193, 7, 0.6)",
-                "0 0 15px rgba(255, 193, 7, 0.4)"
-              ]
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-        )}
         <span className={isActive ? 'text-yellow-400 font-medium' : ''}>{label}</span>
         {isActive && (
           <motion.div

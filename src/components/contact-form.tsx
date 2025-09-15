@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -12,19 +12,41 @@ import { SendIcon } from "@/components/ui/icons"
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const formRef = useRef<HTMLFormElement>(null)
+  const successTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const errorTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  // Cleanup timeouts on unmount
+  useEffect(() => {
+    return () => {
+      if (successTimeoutRef.current) {
+        clearTimeout(successTimeoutRef.current)
+      }
+      if (errorTimeoutRef.current) {
+        clearTimeout(errorTimeoutRef.current)
+      }
+    }
+  }, [])
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault()
     setIsLoading(true)
+    setError(null)
+
+    // Clear any existing timeouts
+    if (successTimeoutRef.current) {
+      clearTimeout(successTimeoutRef.current)
+    }
+    if (errorTimeoutRef.current) {
+      clearTimeout(errorTimeoutRef.current)
+    }
 
     try {
       if (typeof window !== 'undefined' && window.emailjs && formRef.current) {
-        window.emailjs.init(EMAILJS_CONFIG.publicKey)
-
         await window.emailjs.sendForm(
-          EMAILJS_CONFIG.serviceId, 
-          EMAILJS_CONFIG.templateId, 
+          EMAILJS_CONFIG.serviceId,
+          EMAILJS_CONFIG.templateId,
           formRef.current
         )
         setIsSubmitted(true)
@@ -33,15 +55,19 @@ export default function ContactForm() {
         }
 
         // Reset success state after 5 seconds
-        setTimeout(() => {
+        successTimeoutRef.current = setTimeout(() => {
           setIsSubmitted(false)
         }, 5000)
       } else {
-        throw new Error('EmailJS not loaded')
+        throw new Error('EmailJS not loaded. Please refresh the page and try again.')
       }
     } catch (error) {
       console.error('Error sending email:', error)
-      alert('Failed to send message. Please try again or email me directly.')
+      setError('Failed to send message. Please try again or email me directly.')
+      // Clear error after 5 seconds
+      errorTimeoutRef.current = setTimeout(() => {
+        setError(null)
+      }, 5000)
     } finally {
       setIsLoading(false)
     }
@@ -147,6 +173,16 @@ export default function ContactForm() {
                 )}
               </Button>
             </motion.div>
+
+            {error && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mt-4 p-3 bg-destructive/10 border border-destructive/20 rounded-lg text-destructive text-sm"
+              >
+                {error}
+              </motion.div>
+            )}
 
           </form>
 

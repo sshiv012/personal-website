@@ -3,8 +3,8 @@ import type { PersonalInfo, EmailJSConfig, AnimationConstants, SunAnimationConfi
 // Personal Information Constants
 export const PERSONAL_INFO: PersonalInfo = {
   name: "Suryaa Charan",
-  title: "Senior Applications Programmer & AI Engineer",
-  description: "UC Riverside graduate specializing in AI systems, geospatial analytics, and distributed computing. Experience with Apache AsterixDB, Temenos, and cutting-edge research.",
+  title: "Software Engineer Who Can Sell.",
+  description: "UC Riverside graduate specializing in Backend Development, AI systems, geospatial analytics, and distributed computing. Experience with Future Farm Now,Apache AsterixDB, Temenos, and cutting-edge research.",
   email: "sshiv012@ucr.edu",
   github: "https://github.com/suryaacharan",
   linkedin: "https://linkedin.com/in/suryaacharan",
@@ -60,3 +60,25 @@ export const UI_CONSTANTS: UIConstants = {
     lg: "1024px",
   },
 } as const;
+
+// Contact Methods
+export const CONTACT_METHODS = [
+  {
+    title: "Email",
+    description: "Best for detailed discussions and project inquiries",
+    value: PERSONAL_INFO.email,
+    link: `mailto:${PERSONAL_INFO.email}`
+  },
+  {
+    title: "LinkedIn",
+    description: "Professional networking and career opportunities",
+    value: "Connect on LinkedIn",
+    link: PERSONAL_INFO.linkedin
+  },
+  {
+    title: "GitHub",
+    description: "Explore my code and open source contributions",
+    value: "View on GitHub",
+    link: PERSONAL_INFO.github
+  }
+] as const;
