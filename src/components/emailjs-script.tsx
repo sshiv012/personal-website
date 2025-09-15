@@ -8,14 +8,9 @@ export default function EmailJSScript() {
     <Script
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
       strategy="afterInteractive"
-      integrity="sha384-dH8hL6Ktt7IQB7vP9u5LbE9Ys+OUnDv3LF7UNW1yM1V7PhNJnCxyB5L7VBdG6Mvu"
-      crossOrigin="anonymous"
       onLoad={() => {
         if (typeof window !== 'undefined' && window.emailjs) {
-          const publicKey = EMAILJS_CONFIG.publicKey;
-          if (publicKey && publicKey !== 'xxxxxxxxxxxxx') {
-            window.emailjs.init(publicKey);
-          }
+          window.emailjs.init(EMAILJS_CONFIG.publicKey);
         }
       }}
     />
