@@ -29,6 +29,11 @@ export const metadata: Metadata = {
   title: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.title}`,
   description: PERSONAL_INFO.description,
   metadataBase: new URL('https://suryaacharan.com'),
+  icons: {
+    icon: "/sun-favicon.svg",
+    shortcut: "/sun-favicon.svg",
+    apple: "/sun-favicon.svg",
+  },
   openGraph: {
     title: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.title}`,
     description: PERSONAL_INFO.description,
