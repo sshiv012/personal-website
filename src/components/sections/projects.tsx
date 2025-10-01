@@ -185,7 +185,8 @@ const projects = [
     title: "GeoVocab",
     description: "Revolutionary mapping solution that locates any geographic location with 3 simple English words",
     technologies: ["Java", "Spring Boot", "MySQL", "Docker"],
-    link: "https://github.com/suryaacharan/geovocab"
+    link: "https://github.com/suryaacharan/geovocab",
+    liveLink: "https://geovocab.vercel.app/"
   },
   {
     title: "Weather Data Analytics",
