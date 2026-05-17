@@ -168,29 +168,35 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
 
 const projects = [
   {
-    title: "PlotThePlot",
-    description: "AI-Native Novel Analysis Platform using Gemini 2.0 for long-form comprehension, producing structured story arcs and relationship graphs",
-    technologies: ["Python", "Flask", "Gemini 2.0", "Next.js", "D3.js", "SQLite"],
-    link: "https://github.com/sshiv012/PlotThePlotRepo",
-    liveLink: "https://plot-the-plot.vercel.app/"
-  },
-  {
-    title: "Raster Data Exploration",
-    description: "Full-stack platform for exploring terabyte-scale satellite imagery with custom indexing and millisecond pixel retrieval",
-    technologies: ["Scala", "Apache Spark", "Hadoop", "JavaScript", "Beast"],
+    title: "DynoViz: Dynamic Visualization of Large-Scale Data",
+    description: "Scala/Java/Spark distributed engine for terabyte-scale visualization. 60× storage reduction, up to 10× faster queries via on-demand tiling, hierarchical indexing, optimized caching, and selective pre-generation. Published at ACM SIGSPATIAL '24.",
+    technologies: ["Scala", "Java", "Apache Spark", "Hadoop", "Beast", "Maven", "JavaScript"],
     link: "https://dl.acm.org/doi/10.1145/3681763.3698475",
     demoLink: "https://youtu.be/CRZg8ra0bc4"
   },
   {
+    title: "PlotThePlot",
+    description: "AI-native LLM application that transforms long-form text into structured story arcs, relationship graphs, and act-level summaries using Gemini with schema-guided function calling and validation pipelines for reproducible outputs.",
+    technologies: ["Python", "Flask", "Gemini 2.0", "TypeScript", "Next.js", "React", "D3.js", "SQLite", "Vercel"],
+    link: "https://github.com/sshiv012/PlotThePlotRepo",
+    liveLink: "https://plot-the-plot.vercel.app/"
+  },
+  {
     title: "GeoVocab",
-    description: "Revolutionary mapping solution that locates any geographic location with 3 simple English words",
+    description: "Locate any geographic point with 3 simple English words. Bidirectional translation between coordinates and natural-language identifiers, served via a Java/Spring Boot service deployed in Docker.",
     technologies: ["Java", "Spring Boot", "MySQL", "Docker"],
     link: "https://github.com/suryaacharan/geovocab",
     liveLink: "https://geovocab.vercel.app/"
   },
   {
+    title: "Feature Selection (AI / ML)",
+    description: "Forward selection and backward elimination over KNN to identify highest-impact features in tabular datasets, optimizing model accuracy for downstream classifiers.",
+    technologies: ["Python", "KNN", "Statistical Analysis"],
+    link: "https://github.com/suryaacharan/FeatureSelection"
+  },
+  {
     title: "Weather Data Analytics",
-    description: "MapReduce system processing 4 years of weather data to identify states with stable weather patterns, 20% performance improvement",
+    description: "MapReduce pipelines (parsers, mappers, combiners, reducers) over a 4-year US weather dataset to identify states with stable weather patterns; 20% performance gain via map-side joins.",
     technologies: ["Java", "MapReduce", "Hadoop", "Maven"],
     link: "https://github.com/suryaacharan/WeatherReportProcessing"
   }

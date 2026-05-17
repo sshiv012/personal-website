@@ -43,23 +43,31 @@ const SkillBadge = ({ skill }: { skill: string; index: number }) => {
 const skillCategories = [
   {
     category: "Languages",
-    skills: ["Java", "Python", "TypeScript", "Scala", "Node.js"]
+    skills: ["Java", "Python", "TypeScript", "SQL", "Scala"]
   },
   {
-    category: "Database",
-    skills: ["PostgreSQL", "AsterixDB", "MySQL", "MongoDB", "DynamoDB", "Redis"]
+    category: "Distributed Systems & OSS",
+    skills: ["Apache AsterixDB (Committer)", "Apache Spark", "Hadoop / HDFS", "Kafka", "Event-Driven Architecture", "SAGA Orchestration", "JTS", "OGC Standards"]
+  },
+  {
+    category: "Databases",
+    skills: ["PostgreSQL (pgvector / HNSW)", "AsterixDB", "MySQL", "BigQuery", "DynamoDB", "Redis"]
   },
   {
     category: "Frameworks",
-    skills: ["Spring", "FastAPI", "JPA", "Hibernate", "JUnit", "Next.js", "React", "Lambda Functions"]
+    skills: ["Spring Boot", "FastAPI", "Next.js", "React", "JPA", "Hibernate", "JUnit", "Microservices"]
   },
   {
-    category: "DevOps & Tools",
-    skills: ["Docker", "CI/CD with Jenkins", "AWS", "Azure", "Swagger", "Kafka", "OAuth"]
+    category: "Cloud & DevOps",
+    skills: ["AWS (Lambda, SQS, Kinesis, RDS)", "GCP (BigQuery, Cloud SQL Proxy)", "Azure (Event Hubs, Function App)", "Terraform", "Docker", "Jenkins", "CI/CD", "Maven", "Linux", "OpenSearch / ELK", "Apache HTTP Server (SSL/TLS)"]
   },
   {
     category: "AI & ML",
-    skills: ["Gemini 2.0", "Prompt Engineering", "Function Calling", "Schema-guided AI", "Google AI Studio"]
+    skills: ["Gemini 2.5 Flash", "RAG", "Agentic Workflows", "Function Calling", "Prompt Caching", "Multimodal AI", "Schema-Guided AI", "MCP / Tooling"]
+  },
+  {
+    category: "Embedded Fintech",
+    skills: ["Open Banking Aggregators (SaltEdge, Plaid)", "Codat (banking / accounting / payroll)", "SMB Cash-Flow Analytics"]
   }
 ]
 

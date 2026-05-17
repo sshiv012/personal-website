@@ -7,8 +7,29 @@ import Image from "next/image"
 
 const activities = [
   {
+    title: "Apache AsterixDB Committer",
+    description: "Granted committer status on Apache AsterixDB after sustained contributions: containerized multi-node deployments, CRS-aware geospatial execution, JTS migration for memory and query gains, and ongoing alignment with OGC standards.",
+    date: "Ongoing",
+    type: "Open Source",
+    status: "Active"
+  },
+  {
+    title: "Candidate for UC Tech Award for Innovation",
+    description: "Selected as a candidate for the UC Tech Award for Innovation (UC system-wide) for FutureFarmNow. Authored and presented the technical and business narrative to senior UC leadership ahead of the upcoming award event.",
+    date: "Upcoming",
+    type: "Recognition",
+    status: "Active"
+  },
+  {
+    title: "Google Summer of Code — Apache AsterixDB",
+    description: "Designed, proposed, and mentoring the Apache AsterixDB GSoC project on MCP / tooling support for safe, schema-aware AI agent analytics. Helping bring new contributors into the project.",
+    date: "Ongoing",
+    type: "Open Source",
+    status: "Active"
+  },
+  {
     title: "IEEE MDM 2025 Presentation",
-    description: "Presenting advanced seminar on geospatial analytics with AsterixDB, showcasing novel spatial capabilities",
+    description: "Presented advanced seminar on geospatial analytics with Apache AsterixDB, showcasing novel spatial capabilities to academic and industry audiences.",
     date: "Completed",
     type: "Research",
     status: "Completed",
@@ -16,15 +37,8 @@ const activities = [
     link: "https://mdm2025.github.io/advancedSeminars.html#main"
   },
   {
-    title: "Apache AsterixDB Enhancement",
-    description: "Improving geospatial compatibility and adding Coordinate reference system support, enroute to become an Apache contributor",
-    date: "Ongoing",
-    type: "Open Source",
-    status: "Active"
-  },
-  {
     title: "Big Data Management Workshop",
-    description: "Led one of the most successful big data workshops in Southern California with 60+ participants",
+    description: "Planned and led one of the most successful AsterixDB workshops in Southern California with 60+ participants. Yelp business/review data, semantic modeling, query design, and performance benchmarking.",
     date: "Recent",
     type: "Teaching",
     status: "Completed",
@@ -32,8 +46,8 @@ const activities = [
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7256293581492035584/"
   },
   {
-    title: "UCR Star on Raster - SIGSPATIAL",
-    description: "Built scalable raster visualization system with Scala/Spark + JavaScript, featuring hierarchical tile pyramids and real-time spatial data exploration",
+    title: "DynoViz — ACM SIGSPATIAL '24",
+    description: "Scala/Java/Spark distributed visualization engine for terabyte-scale data. 60× storage reduction and up to 10× faster query latency via hierarchical tile pyramids, optimized caching, and selective pre-generation.",
     date: "Published",
     type: "Research",
     status: "Completed",

@@ -6,49 +6,51 @@ import StaggerItem from "@/components/animations/stagger-item"
 
 const experiences = [
   {
-    company: "UC Riverside - Future Farm Now & Apache AsterixDB",
-    position: "Senior Applications Programmer",
+    company: "UC Riverside - FutureFarmNow & Apache AsterixDB",
+    position: "Senior Software Engineer",
     period: "May 2024 - Present",
-    description: "Lead engineer for USDA-funded Future Farm Now project processing satellite imagery from Planet Labs, Landsat, and Sentinel. Simultaneously managing UCR's Big Data infrastructure and expanding AsterixDB's geospatial capabilities.",
+    description: "Apache AsterixDB Committer and solo engineer at UCR shipping products for the US Department of Agriculture (USDA-NIFA-funded FutureFarmNow) and maintaining the data pipelines behind them. Lab's engineering and outreach lead, absorbing operational load so faculty and researchers can focus on research and teaching.",
     link: "https://ffn.cs.ucr.edu/",
-    linkText: "Try Future Farm Now beta version",
+    linkText: "Try FutureFarmNow beta",
     achievements: [
-      "Built interactive soil analysis system with multi-layer visualizations for California farmers",
-      "Developed advanced NDVI time-series analysis with year-over-year trend comparisons",
-      "Built 60+ spatial functions for geometry data processing in distributed AsterixDB clusters",
-      "Integrated Coordinate Reference System (CRS) support across distributed systems",
-      "Led database workshop engaging 60+ undergraduate students in Southern California",
-      "Engineered GPS-optimized smart soil sampling with real-time accuracy assessment",
-      "Created evapotranspiration mapping system for crop water use monitoring",
-      "Architected Next.js frontend with Scala/Python backend handling 100+ TB satellite datasets"
+      "Apache AsterixDB Committer; led Java open-source contributions to a JSON-native distributed query engine — containerized multi-node deployments, CRS-aware geospatial execution, and a JTS migration improving memory and query latency. Driving alignment with OGC standards.",
+      "Engineered DynoViz, a Scala/Java/Spark distributed visualization engine serving terabyte-scale data with 60× storage reduction and up to 10× faster query latency. Published at ACM SIGSPATIAL '24.",
+      "Candidate for the UC Tech Award for Innovation (UC system-wide) for FutureFarmNow — authored and presented the technical and business narrative to senior UC leadership.",
+      "Built and deployed a multimodal AI assistant on Gemini 2.5 Flash with a 5-turn agentic tool loop across 7 live APIs (soil, NDVI, evapotranspiration, pest risk, market prices). Cut cached input token cost by 75% via prompt caching and TTL-based response caching.",
+      "Prototyped a governed RAG pipeline on GCP using Gemini embeddings, BigQuery, and Cloud SQL Proxy into PostgreSQL with pgvector/HNSW for grounded inference over private knowledge.",
+      "Orchestrated long-running Python and Spark analytics pipelines with request-state tracking, retries, idempotency, caching, outbox-style eventual consistency, and OpenSearch (ELK) for observability across 100+ TB workloads.",
+      "Built the TypeScript/Next.js frontend for FutureFarmNow, optimizing geospatial data fetching, caching, progressive rendering, and code chunking.",
+      "Designed, proposed, and mentor the Apache AsterixDB Google Summer of Code project on MCP/tooling support for safe, schema-aware AI agent analytics.",
+      "Planned and led hands-on AsterixDB workshops with real-world Yelp data covering semantic modeling, query design, and performance benchmarking.",
+      "Presented at IEEE MDM 2025 and academic/industry events; mentor Masters students on distributed-systems and AI projects, prepare engineering-focused academic material, and drive industrial collaborations."
     ],
-    technologies: ["Next.js", "Scala", "Python", "Flask", "Java", "AsterixDB", "Satellite Imagery", "NDVI", "Leaflet", "Remote Sensing", "Distributed Systems", "Geospatial Analytics"]
+    technologies: ["Apache AsterixDB", "Scala", "Java", "Python", "Spark", "Next.js", "TypeScript", "Gemini 2.5 Flash", "RAG", "GCP", "BigQuery", "PostgreSQL", "pgvector", "OpenSearch (ELK)", "Linux", "HDFS", "JTS", "OGC", "Distributed Systems", "Geospatial Analytics"]
   },
   {
     company: "Temenos",
     position: "Senior Software Engineer",
     period: "July 2021 - August 2022",
-    description: "Implemented event-driven microservices and integrated Open Banking APIs. Finalist in Temenos Hackathon with virtual CFO solution.",
+    description: "Built event-driven microservices and integrated Open Banking + accounting-data aggregators for digital banking. Finalist in the Temenos Hackathon for a fractional-CFO concept pitched to the exec committee.",
     achievements: [
-      "Built SAGA pattern microservice improving system reliability",
-      "Integrated APIs with 100+ financial institutions",
-      "Saved 20+ engineering hours weekly with automation scripts",
-      "Containerized microservices using Docker & Kubernetes"
+      "Integrated RESTful Java/Spring services with Open Banking aggregators (SaltEdge, Plaid) for real-time account linking and transaction-data ingestion across 100+ financial institutions inside Temenos Infinity.",
+      "Pitched to the Temenos exec committee a fractional-CFO concept for SMBs leveraging Codat integrations across banking, accounting, payroll, and commerce data for cash-flow visibility and credit-readiness analytics. Productized after the Hackathon final.",
+      "Designed an event-driven microservice using the SAGA pattern on Kafka / SQS / EventHubs and AWS Lambda for serverless workflow steps, with structured logging, metrics, and retry mechanisms.",
+      "Built Terraform-based infrastructure-as-code and microservice deployment workflows across AWS and Azure, saving 20+ engineering hours every week."
     ],
-    technologies: ["Java", "Spring", "AWS", "Azure", "Docker", "Kubernetes", "REST APIs"]
+    technologies: ["Java", "Spring", "Kafka", "AWS Lambda", "AWS SQS", "Azure Event Hubs", "Terraform", "SaltEdge", "Plaid", "Codat", "SAGA", "REST APIs", "Docker"]
   },
   {
     company: "Temenos",
     position: "Software Engineer",
     period: "July 2019 - July 2021",
-    description: "Designed event-driven request management system handling tens of thousands of daily requests. Mentored new hires and optimized QA processes.",
+    description: "Co-designed event-driven request management for digital banking, automated build/deploy pipelines, and served as L1 Developer point of contact for global banks.",
     achievements: [
-      "Captured 10,000+ daily service requests via REST APIs",
-      "Reduced onboarding time by 8 weeks for new hires",
-      "Built automation saving 40 person-hours weekly",
-      "Served as L1 Developer POC for Product Analysis team"
+      "Co-designed an event-driven request management system in Java/Spring capturing tens of thousands of digital banking service requests daily through REST APIs.",
+      "Implemented unit, integration, and end-to-end tests.",
+      "Automated build and deployment of retail banking artifacts on AWS/Azure CI/CD pipelines, saving 40 person-hours weekly.",
+      "Served as L1 Developer point of contact for global banks; investigated and triaged production transaction-flow incidents via JSON event-log analysis of microservice payloads."
     ],
-    technologies: ["Java", "Spring Boot", "REST APIs", "Microservices", "Banking Systems"]
+    technologies: ["Java", "Spring Boot", "REST APIs", "Microservices", "AWS", "Azure", "CI/CD", "JSON Log Analysis"]
   }
 ]
 

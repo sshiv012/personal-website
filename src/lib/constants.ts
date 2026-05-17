@@ -3,10 +3,10 @@ import type { PersonalInfo, EmailJSConfig, AnimationConstants, SunAnimationConfi
 // Personal Information Constants
 export const PERSONAL_INFO: PersonalInfo = {
   name: "Suryaa Charan",
-  title: "Software Engineer Who Can Sell.",
-  description: "UC Riverside graduate specializing in Backend Development, AI systems, geospatial analytics, and distributed computing. Experience with Future Farm Now,Apache AsterixDB, Temenos, and cutting-edge research.",
+  title: "Backend Engineer specializing in distributed systems & applied AI.",
+  description: "Senior Software Engineer at UC Riverside and Apache AsterixDB Committer. Solo engineer shipping products for the US Department of Agriculture (FutureFarmNow) and maintaining the data pipelines behind them. Previously 3 years at Temenos building event-driven digital banking microservices.",
   email: "sshiv012@ucr.edu",
-  github: "https://github.com/suryaacharan",
+  github: "https://github.com/sshiv012",
   linkedin: "https://linkedin.com/in/suryaacharan",
 } as const;
 

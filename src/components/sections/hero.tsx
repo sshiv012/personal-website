@@ -31,8 +31,9 @@ export default function Hero() {
         <FadeIn delay={0.2}>
           <div className="space-y-4">
             <p className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed text-muted-foreground">
-              Building scalable backends, human centric fronts, steady infra.<br />
-              Now exploring AI workflows and geospatial analytics.<br />MS Computer Science @ UC Riverside.
+              Apache AsterixDB Committer. Senior Software Engineer at UC Riverside.<br />
+              Building scalable backends, human-centric fronts, and steady infra for FutureFarmNow.<br />
+              MS Computer Science @ UC Riverside.
             </p>
             <div className="flex gap-4 justify-center">
               <Button
