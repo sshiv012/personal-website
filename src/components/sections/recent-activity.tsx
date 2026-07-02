@@ -14,11 +14,11 @@ const activities = [
     status: "Active"
   },
   {
-    title: "Candidate for UC Tech Award for Innovation",
-    description: "Selected as a candidate for the UC Tech Award for Innovation (UC system-wide) for FutureFarmNow. Authored and presented the technical and business narrative to senior UC leadership ahead of the upcoming award event.",
-    date: "Upcoming",
+    title: "Won UC Tech Award for Innovation",
+    description: "Won the UC Tech Award for Innovation (UC system-wide) for FutureFarmNow. Authored and presented the technical and business narrative to senior UC leadership.",
+    date: "Recent",
     type: "Recognition",
-    status: "Active"
+    status: "Completed"
   },
   {
     title: "Google Summer of Code — Apache AsterixDB",

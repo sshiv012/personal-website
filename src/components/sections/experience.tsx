@@ -15,9 +15,10 @@ const experiences = [
     achievements: [
       "Apache AsterixDB Committer; led Java open-source contributions to a JSON-native distributed query engine — containerized multi-node deployments, CRS-aware geospatial execution, and a JTS migration improving memory and query latency. Driving alignment with OGC standards.",
       "Engineered DynoViz, a Scala/Java/Spark distributed visualization engine serving terabyte-scale data with 60× storage reduction and up to 10× faster query latency. Published at ACM SIGSPATIAL '24.",
-      "Candidate for the UC Tech Award for Innovation (UC system-wide) for FutureFarmNow — authored and presented the technical and business narrative to senior UC leadership.",
+      "Won the UC Tech Award for Innovation (UC system-wide) for FutureFarmNow — authored and presented the technical and business narrative to senior UC leadership.",
       "Built and deployed a multimodal AI assistant on Gemini 2.5 Flash with a 5-turn agentic tool loop across 7 live APIs (soil, NDVI, evapotranspiration, pest risk, market prices). Cut cached input token cost by 75% via prompt caching and TTL-based response caching.",
       "Prototyped a governed RAG pipeline on GCP using Gemini embeddings, BigQuery, and Cloud SQL Proxy into PostgreSQL with pgvector/HNSW for grounded inference over private knowledge.",
+      "Contributed to Apache Texera (open-source data-workflow platform): designed and implemented turn-level undo/redo for an LLM ReAct agent, letting users safely rewind AI-driven edits to their workflow via a step version-tree with HEAD-pointer rewind over WebSockets across a Bun/TypeScript/LiteLLM agent service and Angular frontend, with full unit-test coverage.",
       "Orchestrated long-running Python and Spark analytics pipelines with request-state tracking, retries, idempotency, caching, outbox-style eventual consistency, and OpenSearch (ELK) for observability across 100+ TB workloads.",
       "Built the TypeScript/Next.js frontend for FutureFarmNow, optimizing geospatial data fetching, caching, progressive rendering, and code chunking.",
       "Designed, proposed, and mentor the Apache AsterixDB Google Summer of Code project on MCP/tooling support for safe, schema-aware AI agent analytics.",
